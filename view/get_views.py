@@ -8,12 +8,6 @@ def get_routes(app):
     def teste123():
         return '<h1>---------IS WORKING now 7.9 !9999--------- <h1>', 200
 
-    # @app.get('/admin')
-    # def teste777():
-    #     data_list = get_items_data(admin_collection.find({}))
-    #     return jsonify(data_list), 200
-    
-
     @app.get('/teacher')
     def show_teachers():
         return get_available_teachers()
