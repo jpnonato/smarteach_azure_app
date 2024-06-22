@@ -1,6 +1,6 @@
 
 from flask import Flask, jsonify
-from flask_cors import CORS
+# from flask_cors import CORS
 from pymongo import MongoClient
 from dotenv import load_dotenv
 # from services import get_items_data
@@ -13,7 +13,7 @@ app = Flask(__name__, static_folder=None)
 # from app.view import init_app
 
 # init_app(app)
-CORS(app)
+# CORS(app)
 
 load_dotenv()
 
