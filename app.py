@@ -2,7 +2,7 @@ from flask import Flask,jsonify
 from pymongo import MongoClient
 import urllib.parse
 
-from .services.request_services import get_items_data
+from services.request_services import get_items_data
 
 # from services import get_items_data
 
