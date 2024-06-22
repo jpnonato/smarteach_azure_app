@@ -33,12 +33,7 @@ def teste123():
 
 @app.get('/admin')
 def teste777():
-    data_list = [data for data in admin_collection.find({})]
-
-    for index, elt in enumerate(data_list):
-        data_list[index] = {key: elt[key] if key != '_id' else str(elt[key]) for key in elt}
-
-
+    data_list = get_items_data(admin_collection.find({}))
     return jsonify(data_list), 200
 
 
