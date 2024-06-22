@@ -2,10 +2,8 @@ from flask import Flask,jsonify
 from pymongo import MongoClient
 import urllib.parse
 
-from .services import get_items_data
 
 app = Flask(__name__)
-
 
 DB_USER = urllib.parse.quote_plus('smarTeachAdmin')
 PASSWORD = urllib.parse.quote_plus('i9vii-d@5V*4_TR')
