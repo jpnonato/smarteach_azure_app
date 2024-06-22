@@ -4,7 +4,7 @@ from flask import jsonify
 from pymongo import MongoClient
 
 from services import *
-from model import *
+from .model import Activity, Admin, Class, Student, Teacher
 
 DB_USER = urllib.parse.quote_plus('smarTeachAdmin')
 PASSWORD = urllib.parse.quote_plus('i9vii-d@5V*4_TR')
