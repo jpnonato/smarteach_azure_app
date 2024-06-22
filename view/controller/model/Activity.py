@@ -1,16 +1,16 @@
 # from app.services import verify_data_format
 
-def verify_data_format(data, type):
+# def verify_data_format(data, type):
         
-        regex = r"^'([01]?[0-9]|2[0-3]):([0-5][0-9])-([01]?[0-9]|2[0-3]):([0-5][0-9])$'"
+#         regex = r"^'([01]?[0-9]|2[0-3]):([0-5][0-9])-([01]?[0-9]|2[0-3]):([0-5][0-9])$'"
 
-        if type == 'DATE':
-            regex = r"^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$"
+#         if type == 'DATE':
+#             regex = r"^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$"
 
-        is_wrong_format = re.search(regex, data)
+#         is_wrong_format = re.search(regex, data)
 
-        if is_wrong_format:
-            return True
+#         if is_wrong_format:
+#             return True
 
 
 class Activity():
@@ -38,14 +38,14 @@ class Activity():
         if not activity_date:
             return 'Necessário enviar o data desta aula'
         
-        if not verify_data_format(activity_date, "DATE"):
-            return 'Formato da data inválido! ele deve ser: "dd/mm/aaaa"'
+        # if not verify_data_format(activity_date, "DATE"):
+        #     return 'Formato da data inválido! ele deve ser: "dd/mm/aaaa"'
         
         if not activity_date:
             return 'Necessário enviar o horário desta aula'
 
-        if verify_data_format(activity_time, "TIME"):
-            return 'Formato do horário inválido! ele deve ser: hh:min'
+        # if verify_data_format(activity_time, "TIME"):
+        #     return 'Formato do horário inválido! ele deve ser: hh:min'
         
         day, month, year = activity_date.split('/')
 
