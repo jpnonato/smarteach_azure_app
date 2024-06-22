@@ -1,6 +1,12 @@
 import urllib.parse
 from pymongo import MongoClient
 
+from .activity_controller import *
+from .admin_controller import *
+from .class_controller import *
+from .student_controller import *
+from .teacher_controller import *
+
 DB_USER = urllib.parse.quote_plus('smarTeachAdmin')
 PASSWORD = urllib.parse.quote_plus('i9vii-d@5V*4_TR')
 URL_CONNECTION = "mongodb+srv://{}:{}@cluster0.zhk40vn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
