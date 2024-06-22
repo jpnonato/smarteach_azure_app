@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,jsonify
 from pymongo import MongoClient
 import urllib.parse 
 
@@ -29,6 +29,17 @@ classes_collection = db.get_collection('Turmas')
 @app.get('/')
 def teste123():
     return '<h1>---------IS WORKING now!!!--------- <h1>', 200
+
+@app.get('/admin')
+def teste777():
+    data_list = [data for data in admin_collection.find({})]
+
+    for index, elt in enumerate(data_list):
+        data_list[index] = {key: elt[key] if key != '_id' else str(elt[key]) for key in elt}
+
+
+    return jsonify(data_list), 200
+
 
 
 if __name__ == '__main__':
