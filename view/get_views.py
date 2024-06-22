@@ -8,7 +8,7 @@ from flask import request
 
 
 
-from ..services.request_services import teste123
+from services.request_services import teste123
 
 
 
