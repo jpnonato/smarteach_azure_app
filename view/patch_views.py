@@ -1,6 +1,6 @@
 from flask import request
 
-from controller import *
+from .controller import update_admin_profile, update_class_activity_profile, update_class_profile, update_student_profile, update_teacher_profile
 
 
 

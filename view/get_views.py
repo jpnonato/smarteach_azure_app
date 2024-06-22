@@ -1,12 +1,12 @@
 from flask import request
 
-from controller import *
+from .controller import get_teacher_profile, get_available_teachers, get_available_classes, get_available_admins, get_admin_profile, get_available_students, get_class_profile, get_month_class_activities, get_student_profile
 
 
 def get_routes(app):
     @app.get('/')
     def teste123():
-        return '<h1>---------IS WORKING now 7.9 !$&--------- <h1>', 200
+        return '<h1>---------IS WORKING now 7.9 !9999--------- <h1>', 200
 
     # @app.get('/admin')
     # def teste777():
