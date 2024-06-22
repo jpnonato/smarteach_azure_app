@@ -4,9 +4,6 @@ from .controller import get_teacher_profile, get_available_teachers, get_availab
 
 
 def get_routes(app):
-    @app.get('/')
-    def teste123():
-        return '<h1>---------IS WORKING now 7.9 !9999--------- <h1>', 200
 
     @app.get('/teacher')
     def show_teachers():
