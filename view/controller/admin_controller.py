@@ -1,9 +1,9 @@
 from flask import jsonify
 from bson import ObjectId
 
-from app.model import Admin 
-from app.controller import admin_collection
-from app.services import get_items_data, verify_user_email, verify_request_data, update_time_data, verify_update_sent_data_request, get_data_by_id
+from model import Admin 
+from controller import admin_collection
+from services import get_items_data, verify_user_email, verify_request_data, update_time_data, verify_update_sent_data_request, get_data_by_id
 
 def get_available_admins():
 

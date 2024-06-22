@@ -1,12 +1,10 @@
-# from .delete_views import delete_routes
-# from .get_views import get_routes
-# from .patch_views import patch_routes
-# from .post_views import post_routes
+from delete_views import delete_routes
+from get_views import get_routes
+from patch_views import patch_routes
+from post_views import post_routes
 
-from flask import jsonify
 from pymongo import MongoClient
 import urllib.parse
-from services import get_items_data
 
 
 DB_USER = urllib.parse.quote_plus('smarTeachAdmin')
@@ -31,12 +29,7 @@ admin_collection = db.get_collection('Admins')
 classes_collection = db.get_collection('Turmas')
 
 def init_app(app):
-
-    @app.get('/')
-    def teste123():
-        return '<h1>---------IS WORKING now 7.9 !$&--------- <h1>', 200
-
-    @app.get('/admin')
-    def teste777():
-        data_list = get_items_data(admin_collection.find({}))
-        return jsonify(data_list), 200
+    post_routes(app)
+    get_routes(app)
+    patch_routes(app)
+    delete_routes(app)

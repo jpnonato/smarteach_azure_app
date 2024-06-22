@@ -1,9 +1,9 @@
 from bson import ObjectId
 from flask import jsonify
 
-from app.model import Class
-from app.controller import classes_collection
-from app.services import verify_request_data, get_data_by_id, get_items_data, update_time_data, verify_update_sent_data_request
+from model import Class
+from controller import classes_collection
+from services import verify_request_data, get_data_by_id, get_items_data, update_time_data, verify_update_sent_data_request
 
 
 def get_available_classes():

@@ -1,10 +1,10 @@
 from flask import jsonify
 from bson import ObjectId
 
-from app.model import Teacher, Class
-from app.controller import teacher_collection, classes_collection
-from app.controller.class_controller import update_class_profile
-from app.services import verify_request_data, get_items_data, get_data_by_id, get_user_by_email, verify_user_email, update_time_data, verify_update_sent_data_request
+from model import Teacher, Class
+from controller import teacher_collection, classes_collection
+from controller.class_controller import update_class_profile
+from services import verify_request_data, get_items_data, get_data_by_id, get_user_by_email, verify_user_email, update_time_data, verify_update_sent_data_request
 
 
 def get_available_teachers():

@@ -1,12 +1,11 @@
 import os
 import urllib.parse
 from pymongo import MongoClient
-from dotenv import load_dotenv
 
-load_dotenv()
-DB_USER = urllib.parse.quote_plus(os.getenv('DB_USER'))
-PASSWORD = urllib.parse.quote_plus(os.getenv('PASSWORD'))
-STR_CONNECTION = os.getenv('DB_STR_CONNECTION').format(DB_USER, PASSWORD)
+DB_USER = urllib.parse.quote_plus('smarTeachAdmin')
+PASSWORD = urllib.parse.quote_plus('i9vii-d@5V*4_TR')
+URL_CONNECTION = "mongodb+srv://{}:{}@cluster0.zhk40vn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+STR_CONNECTION = URL_CONNECTION.format(DB_USER, PASSWORD)
 
 client = MongoClient(STR_CONNECTION)
 

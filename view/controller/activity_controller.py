@@ -1,9 +1,9 @@
 
 from flask import jsonify
 
-from app.model import Activity, Class
-from app.controller import classes_collection, teacher_collection
-from app.services import verify_user_email, verify_update_sent_data_request, update_time_data
+from model import Activity, Class
+from controller import classes_collection, teacher_collection
+from services import verify_user_email, verify_update_sent_data_request, update_time_data
 
 def insert_new_class_activity(data):
 

@@ -1,5 +1,3 @@
-from flask import request
-
 from controller.teacher_controller import get_teacher_profile, get_available_teachers
 from controller.student_controller import get_student_profile, get_available_students
 from controller.class_controller import get_class_profile, get_available_classes
@@ -8,6 +6,9 @@ from controller.activity_controller import get_month_class_activities
 
 
 def get_routes(app):
+    @app.get('/')
+    def teste123():
+        return '<h1>---------IS WORKING now 778 <!> --------- <h1>', 200
 
     @app.get('/teacher')
     def show_teachers():
