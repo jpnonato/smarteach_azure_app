@@ -1,11 +1,11 @@
-import logging
-import os
-import urllib.parse
+
 from flask import Flask, jsonify
 from flask_cors import CORS
 from pymongo import MongoClient
 from dotenv import load_dotenv
-from services import get_items_data
+# from services import get_items_data
+import os
+import urllib.parse
 
 
 app = Flask(__name__, static_folder=None)
@@ -40,11 +40,15 @@ classes_collection = db.get_collection('Turmas')
 
 @app.get('/admin')
 def show_admins():
-    admin_list = get_items_data(admin_collection.find({}))
 
-    return jsonify(admin_list), 200
+    data_list = [data for data in admin_collection.find({})]
+
+    for index, elt in enumerate(data_list):
+        data_list[index] = {key: elt[key] if key != '_id' else str(elt[key]) for key in elt}
+
+
+    return jsonify(data_list), 200
 
 
 if __name__ == '__main__':
-    logging.info(">>>><<<<<  app started!")
     app.run(host="0.0.0.0", port=8000)
