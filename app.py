@@ -2,7 +2,8 @@ from flask import Flask,jsonify
 from pymongo import MongoClient
 import urllib.parse
 
-from services import get_items_data
+# from services import get_items_data
+from view import init_app
 
 # from services import get_items_data
 
@@ -33,11 +34,12 @@ classes_collection = db.get_collection('Turmas')
 def teste123():
     return '<h1>---------IS WORKING now 7.4 !4--------- <h1>', 200
 
-@app.get('/admin')
-def teste777():
-    data_list = get_items_data(admin_collection.find({}))
-    return jsonify(data_list), 200
+# @app.get('/admin')
+# def teste777():
+#     data_list = get_items_data(admin_collection.find({}))
+#     return jsonify(data_list), 200
 
+init_app(app)
 
 
 if __name__ == '__main__':

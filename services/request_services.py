@@ -93,4 +93,8 @@ def verify_update_sent_data_request(data, available_keys):
     
     if wrong_properties:
         return f"Propriedade(s) invalida(s): {wrong_properties}"
+
+
+def teste123():
+    return '>>>>>>>>>>>>><<<<<<<<<<'
         
