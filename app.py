@@ -1,6 +1,6 @@
 from flask import Flask
 
-from view import init_app
+from flask_app import init_app
 
 app = Flask(__name__)
 init_app(app)

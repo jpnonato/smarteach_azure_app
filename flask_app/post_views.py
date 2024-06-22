@@ -9,12 +9,12 @@ def post_routes(app):
         data = request.get_json()
         return insert_new_teacher(data)
 
-    @app.post('/register/admin')
+    @app.post('/admin')
     def register_admin():
         data = request.get_json()
         return insert_new_admin(data)
     
-    @app.post('/register/class')
+    @app.post('/class')
     def register_class():
         data = request.get_json()
         return insert_new_class(data)
