@@ -1,10 +1,10 @@
 from flask import request
 
-from app.controller.teacher_controller import update_teacher_profile
-from app.controller.student_controller import update_student_profile
-from app.controller.class_controller import update_class_profile
-from app.controller.admin_controller import update_admin_profile
-from app.controller.activity_controller import update_class_activity_profile
+from controller.teacher_controller import update_teacher_profile
+from controller.student_controller import update_student_profile
+from controller.class_controller import update_class_profile
+from controller.admin_controller import update_admin_profile
+from controller.activity_controller import update_class_activity_profile
 
 
 
