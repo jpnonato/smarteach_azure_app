@@ -3,7 +3,7 @@ from bson import ObjectId
 from flask import jsonify
 from pymongo import MongoClient
 
-from services import *
+from .request_services import *
 from .model import Activity, Admin, Class, Student, Teacher
 
 DB_USER = urllib.parse.quote_plus('smarTeachAdmin')
