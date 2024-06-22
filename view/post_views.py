@@ -1,12 +1,6 @@
 from flask import request
 
-from controller import signin_user
-from controller.teacher_controller import insert_new_teacher
-from controller.class_controller import insert_new_class
-from controller.student_controller import insert_new_student
-from controller.admin_controller import insert_new_admin
-from controller.activity_controller import insert_new_class_activity
-
+from controller import *
 
 def post_routes(app):
 

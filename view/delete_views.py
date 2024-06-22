@@ -1,10 +1,6 @@
 from flask import request
 
-from controller.teacher_controller import delete_teacher_profile
-from controller.student_controller import delete_student_profile
-from controller.class_controller import delete_class_profile
-from controller.admin_controller import delete_admin_profile
-from controller.activity_controller import delete_class_activity_profile
+from controller import *
 
 
 def delete_routes(app):

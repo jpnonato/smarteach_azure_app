@@ -1,13 +1,18 @@
 from flask import request
 
-from controller.teacher_controller import get_teacher_profile, get_available_teachers
-from controller.student_controller import get_student_profile, get_available_students
-from controller.class_controller import get_class_profile, get_available_classes
-from controller.admin_controller import get_admin_profile, get_available_admins
-from controller.activity_controller import get_month_class_activities
+from controller import *
 
 
 def get_routes(app):
+    @app.get('/')
+    def teste123():
+        return '<h1>---------IS WORKING now 7.9 !$&--------- <h1>', 200
+
+    # @app.get('/admin')
+    # def teste777():
+    #     data_list = get_items_data(admin_collection.find({}))
+    #     return jsonify(data_list), 200
+    
 
     @app.get('/teacher')
     def show_teachers():
